@@ -323,7 +323,7 @@ GameObject:
   - component: {fileID: 888860280}
   m_Layer: 0
   m_Name: Zombie Parade
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -337,7 +337,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 888860279}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42a36e9ee0959e5458abcbc5f1964d98, type: 3}
+  m_Script: {fileID: 11500000, guid: 4ed1d5ced1a93174084f2908bb282803, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Solution.ZombieParade
   Name: 
@@ -345,11 +345,15 @@ MonoBehaviour:
   positionY: 0
   mapGenerator: {fileID: 2186379283630356993}
   energy: 0
+  maxEnergy: 0
   AttackPoint: 0
-  isAlive: 1
+  spriteRenderer: {fileID: 0}
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
+  damagedColor1: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  damagedColor2: {r: 1, g: 0, b: 0, a: 1}
   SizeParade: 3
   bodyPrefab:
-  - {fileID: 5258361076467758692, guid: e990ab1c33129e94f875df0ca7e85075, type: 3}
+  - {fileID: 6291950672839332362, guid: 3fd9e8b149ccd2b4d852a3af5e4ee944, type: 3}
   moveInterval: 0.5
 --- !u!212 &888860281
 SpriteRenderer:
@@ -501,6 +505,10 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8365133027701863277, guid: 896fac2834903504f8973b3186300203, type: 3}
+      propertyPath: EnemysOnMap.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8365133027701863277, guid: 896fac2834903504f8973b3186300203, type: 3}
       propertyPath: enemyPrefab.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -517,9 +525,13 @@ PrefabInstance:
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8365133027701863277, guid: 896fac2834903504f8973b3186300203, type: 3}
+      propertyPath: 'EnemysOnMap.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2604199367801782979, guid: 3fd9e8b149ccd2b4d852a3af5e4ee944, type: 3}
+    - target: {fileID: 8365133027701863277, guid: 896fac2834903504f8973b3186300203, type: 3}
       propertyPath: 'enemyPrefab.Array.data[0]'
       value: 
-      objectReference: {fileID: 5258361076467758692, guid: e990ab1c33129e94f875df0ca7e85075, type: 3}
+      objectReference: {fileID: 2719169275914464831, guid: 725ac0633002c9445955a206beafa7b2, type: 3}
     - target: {fileID: 8365133027701863277, guid: 896fac2834903504f8973b3186300203, type: 3}
       propertyPath: 'itemsPrefab.Array.data[0]'
       value: 

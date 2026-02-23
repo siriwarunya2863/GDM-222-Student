@@ -8,14 +8,15 @@ namespace Solution
         public int Damage;
         public bool IsIceWall;
 
-        private void SetUP()
+        private new void SetUP()
         {
-            IsIceWall = Random.Range(0, 100) < 20 ? true : false;
+            IsIceWall = Random.Range(0, 100) < 20;
             if (IsIceWall)
             {
                 GetComponent<SpriteRenderer>().color = Color.blue;
             }
         }
+        
         public override void Hit(Identity hitBy)
         {
             if (IsIceWall)
